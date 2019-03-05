@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Account_Card_RA">
+            <ImageView
+                android:src="@drawable/account_card_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/accountCardRA_Text"
+                    android:text="@string/transactionAccountCard_current_account"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginStart="13dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
+                    android:textSize="18sp"
+                    android:fontFamily="serif" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/accountCardRA_NumAccount"
+                    android:layout_below="@id/accountCardRA_Text"
+                    android:text="1236-5984-3232-1514"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/accountCardRA_NumAccount"
+                    android:text="@string/transaction_removeFilter"
+                    android:textColor="@color/material_blue_800"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/recentActivitiesAS_Remove"
+                    android:clickable="true"
+                    android:visibility="invisible"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/accountCardRA_Balance"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="7dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <com.truizlop.fabreveallayout.FABRevealLayout
+        android:id="@+id/recentActivities_fabRevealLayoutAdvSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout
+                android:id="@+id/swipyrefreshlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srl_direction="bottom">
+            <ExpandableListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recentActivities_listView"
+                android:scrollbars="horizontal"
+                android:animateLayoutChanges="true"
+                android:groupIndicator="@null"
+                android:dividerHeight="2dp"
+                android:layout_margin="5dp"
+                >
+            </ExpandableListView>
+
+              </com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/material_brown_300"
+            android:id="@+id/relativeLayout">
+            <include
+                layout="@layout/fragment_transactions_advancedsearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu_manage"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/floatingActionButton"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            app:fabSize="mini"/>
+    </com.truizlop.fabreveallayout.FABRevealLayout>
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.isi.pfe.bank_app.Fragments.Exchange">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarexchange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            style="@style/MyToolbar"
+            app:titleTextAppearance="@style/ToolbarTextAppearance.Title"
+            >
+        </android.support.v7.widget.Toolbar>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/currency_chooser"
+    android:paddingTop="25dp"
+    android:paddingBottom="25dp"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:background="@color/material_grey_300"
+    android:layout_below="@id/toolbarexchange">
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="35dp"
+        android:id="@+id/currency_base"
+        android:layout_centerVertical="true"
+        android:src="@drawable/us" />
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:maxHeight="25dp"
+        android:maxWidth="25dp"
+        android:id="@+id/symbole"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/currency_base"
+        android:src="@drawable/dollarsymbol"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:drawablePadding="6dp"
+        android:inputType="numberDecimal"
+        android:layout_toRightOf="@id/symbole"
+        android:background="@drawable/edittext_exchange"
+        android:id="@+id/edittextexchange"
+        android:text="1"
+        android:padding="6dp" />
+    <com.mikepenz.iconics.view.IconicsButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="{faw-arrow-right}"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/edittextexchange"
+        android:layout_alignBottom="@+id/edittextexchange"
+        android:layout_alignRight="@+id/edittextexchange"
+        android:id="@+id/convertButton"
+        />
+</RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currency_chooser"
+        android:id="@+id/rvExchange">
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

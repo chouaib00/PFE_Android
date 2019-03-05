@@ -1,67 +1,127 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:fitsSystemWindows="true">
-
-    <LinearLayout
-        android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/backg"
+    android:scaleType="centerCrop"
+    android:focusableInTouchMode="true"
+    android:id="@+id/loginidd">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="70dp">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:srcCompat="@drawable/logo"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/login_logo"
+       />
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:layout_below="@id/login_logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="56dp"
-        android:paddingLeft="24dp"
-        android:paddingRight="24dp">
+        app:mtf_image="@drawable/ic_email_black_24dp"
+        android:layout_marginTop="20dp"
+        app:mtf_labelColor="@color/material_light_white"
+        app:mtf_openKeyboardOnFocus="true"
+        android:id="@+id/login_username"
+        >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/username"
+        android:hint="@string/login_username"
+        android:textColor="@color/colorPrimary"
+        android:paddingLeft="0dp"
+        android:drawablePadding="5dp"
+        android:textColorHint="@color/material_light_white"
 
-        <ImageView android:src="@drawable/logo"
+        />
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:layout_below="@id/login_username"
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mtf_image="@drawable/ic_lock_black_24dp"
+        app:mtf_labelColor="@color/material_light_white"
+        app:mtf_openKeyboardOnFocus="true"
+        >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/password"
+        android:hint="@string/login_password"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorPrimary"
+        android:paddingLeft="0dp"
+        android:drawablePadding="5dp"
+        android:textColorHint="@color/material_light_white"
+        />
+</com.github.florent37.materialtextfield.MaterialTextField>
+    <com.dd.processbutton.iml.ActionProcessButton
+        android:layout_below="@id/login_password"
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/login_connexion"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        custom:pb_colorComplete="@color/green_complete"
+        custom:pb_colorNormal="@color/material_blue_500"
+        custom:pb_colorPressed="@color/blue_pressed"
+        custom:pb_colorProgress="@color/purple_progress"
+        custom:pb_textProgress="Loading"
+        android:onClick="login"
+        android:background="?attr/selectableItemBackground"
+        />
+    </RelativeLayout>
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/login_FABMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        app:menu_backgroundColor="#ccffffff"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_showAnimation="@anim/jump_from_down"
+        fab:menu_labels_hideAnimation="@anim/jump_to_down">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/login_FABItemExchange"
             android:layout_width="wrap_content"
-            android:layout_height="72dp"
-            android:layout_marginBottom="24dp"
-            android:layout_gravity="center_horizontal" />
-
-        <!-- Email Label -->
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:hint="Email"
-                android:text="a@b.c" />
-        </android.support.design.widget.TextInputLayout>
-
-        <!-- Password Label -->
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
+            android:src="@drawable/ic_compare"
+            app:fab_showAnimation="@anim/fab_slide_in_from_right"
+            app:fab_hideAnimation="@anim/fab_slide_out_to_right"
+            app:fab_size="mini"
+            app:fab_label="Exchanges" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/login_FABItemContact"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="Password"
-                android:text="azerty" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_login"
-            android:layout_width="fill_parent"
+            android:src="@drawable/ic_bookmark"
+            app:fab_size="mini"
+            app:fab_label="Contact Us" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/login_FABItemMap"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
-            android:padding="12dp"
-            android:text="Login"/>
+            android:src="@drawable/ic_location"
+            app:fab_size="mini"
+            app:fab_label="Find ATM/Agency"/>
 
-        <TextView android:id="@+id/link_signup"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="No account yet? Create one"
-            android:gravity="center"
-            android:textSize="16dip"/>
+    </com.github.clans.fab.FloatingActionMenu>
 
-    </LinearLayout>
-</ScrollView>
+</RelativeLayout>

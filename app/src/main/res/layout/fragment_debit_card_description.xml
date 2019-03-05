@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.isi.pfe.bank_app.Fragments.DebitCardDescription">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        style="@style/MyToolbar"
+        app:titleTextAppearance="@style/ToolbarTextAppearance.Title"
+        />
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/debit_card_Title"
+            android:textSize="@dimen/material_typography_title"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/debit_card_desc"
+            android:layout_below="@id/debit_card_Title"
+            android:textSize="@dimen/material_typography_caption"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/debit_card_subTitle"
+            android:layout_below="@id/debit_card_desc"
+            android:layout_marginTop="20dp"
+            android:textSize="@dimen/material_typography_body1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/debit_card_list"
+            android:layout_below="@id/debit_card_subTitle"
+            android:textSize="@dimen/material_typography_caption"
+            android:layout_marginLeft="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/debit_card_list"
+            android:layout_marginTop="40dp"
+            android:text="@string/debit_card_request_button"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@android:color/white"
+            android:background="@color/material_orange_500"/>
+    </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

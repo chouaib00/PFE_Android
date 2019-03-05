@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/compte_card"
+    style="@style/MyCardAccountStyle">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Account"
+                android:id="@+id/compteCard_Type"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-smallcaps"
+                />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_expand_more_black_24dp"
+                android:id="@+id/expand_more_ic"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_expand_less_black_24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/expand_less_ic"
+                android:visibility="invisible"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/compteCard_Balance"
+                android:layout_toLeftOf="@id/expand_more_ic"
+                android:textSize="20sp"
+                android:textColor="@color/material_green_500"
+                />
+        </RelativeLayout>
+        <include layout="@layout/expand_account"/>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+</LinearLayout>

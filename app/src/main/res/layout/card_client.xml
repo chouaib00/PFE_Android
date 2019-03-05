@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/client_card"
+        style="@style/MyCardInfoStyle">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/clientCard_Name"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"/>
+
+            <View style="@style/Divider"
+                android:id="@+id/dv_1"
+                android:layout_below="@id/clientCard_Name"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dv_1"
+                android:textSize="16dp"
+                android:text="@string/client_card_email"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clientCard_Email"
+                android:layout_below="@id/dv_1"
+                android:layout_alignParentRight="true"
+                android:textSize="16dp"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="4dp"/>
+
+            <View style="@style/Divider"
+                android:id="@+id/dv_2"
+                android:layout_below="@id/clientCard_Email"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dv_2"
+                android:text="@string/client_card_address"
+                android:textSize="16dp"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clientCard_Address"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/dv_2"
+                android:textSize="16dp"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="4dp"/>
+
+            <View style="@style/Divider"
+                android:id="@+id/dv_3"
+                android:layout_below="@id/clientCard_Address"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dv_3"
+                android:text="@string/client_card_tel"
+                android:textSize="16dp"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clientCard_Tel"
+                android:layout_below="@id/dv_3"
+                android:layout_alignParentRight="true"
+                android:textSize="16dp"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="4dp"/>
+
+            <View style="@style/Divider"
+                android:id="@+id/dv_4"
+                android:layout_below="@id/clientCard_Tel"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dv_4"
+                android:text="@string/client_card_banker"
+                android:textSize="16dp"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clientCard_banker"
+                android:layout_below="@id/dv_4"
+                android:layout_alignParentRight="true"
+                android:textSize="16dp"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="4dp"/>
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+

@@ -1,8 +1,643 @@
 <resources>
     <string name="app_name">Bank_app</string>
+    <string name="serverIP">http://192.168.1.3:8080</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!--Strings-->
+    <string name="account">Account</string>
+    <string name="loading">Loading</string>
+    <string name="wait">Please wait</string>
+    <string name="number">Number</string>
+    <string name="balance">Balance</string>
+    <string name="share">Share</string>
+    <string name="cancel">Cancel</string>
+    <string name="amount">Amount</string>
+    <string name="agree">Agree</string>
+    <string name="send">Send</string>
+    <!--ERRORS-->
+    <string name="error">Error</string>
+    <string name="error_falseClient">Error Occurred: While getting client information</string>
+    <string name="error_falseAccount">Error Occurred: While getting Account information</string>
+    <string name="error_falseStats">Error Occurred: While getting stats data</string>
+    <string name="error_falseCategory">Error Occurred: While getting Categories</string>
+    <string name="error_JSON">Error Occurred: [Server\'s JSON response might be invalid]!</string>
+    <string name="error_404">Error Occurred: Requested resource not found</string>
+    <string name="error_500">Error Occurred: Something went wrong at server end</string>
+    <string name="error_unexpected">Unexpected Error Occurred! [Most common Error: Device might not be connected to Internet or remote server is not up and running]</string>
+    <string name="error_chooseAccount">Please choose an account</string>
+    <string name="error_reconnect">Error occurred! Please reconnect</string>
+    <string name="error_minRequestAmount">Requested amount needs to be more than 1$</string>
+    <string name="error_storagePermission">Error while creating media file, check storage permissions</string>
+    <string name="error_fileNotFound">File not found: </string>
+    <string name="error_fileAccess">Error accessing file: </string>
+    <!--Login-->
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="login_connexion">Connexion</string>
+    <string name="login_invalidEmail">Invalid Email</string>
+    <string name="login_emptyEmail">Email can\'t be empty</string>
+    <string name="login_emptyPassword">Password can\'t be empty</string>
+    <string name="login_shortPassword">Password too short</string>
+    <!--Tabs-->
+    <string name="tabs_accountInformation">Account information</string>
+    <string name="tabs_transaction">Transactions</string>
+    <string name="tabs_transferMoney">Transfer Money</string>
+    <string name="tabs_requestMoney">Request Money</string>
+    <!--Account info-->
+    <string name="accountInfo_holder">Holder</string>
+    <string name="accountInfo_type">Account type</string>
+    <string name="accountInfo_banker">Banker</string>
+    <!--Transaction-->
+    <string name="transactionAccountCard_current_account">Current Account</string>
+    <string name="transactionAccountCard_balance">Balance</string>
+    <string name="transactionCard_old_balance">Old Balance</string>
+    <string name="transactionCard_new_balance">New Balance</string>
+    <string name="transactionCard_to_account_number">Receiver Account number</string>
+    <string name="transactionCard_from_account_number">Sender Account number</string>
+    <string name="advancedSearch_maximum_date">Maximum Date</string>
+    <string name="advancedSearch_minimum_date">Minimum Date</string>
+    <string name="advancedSearch_category">Category</string>
+    <string name="advancedSearch_received">Show received transactions</string>
+    <string name="advancedSearch_sent">Show sent transactions</string>
+    <string name="advancedSearch_reset"><u>Reset</u></string>
+    <string name="advancedSearch_set">SET</string>
+    <string name="transaction_noMoreDate">No more data!</string>
+    <string name="transaction_removeFilter">Remove Filter</string>
+    <!--My Stats-->
+    <string name="myStat_title">Net Balance</string>
+    <string name="myStat_accountNumber">Account Number:</string>
+    <string name="myStat_netBalance">Current month net Balance:</string>
+    <string name="myStat_CurrShow"><u>Showing last %1$d months</u></string>
+    <string name="myStatDialog_Show">Months to show: </string>
+    <string name="myStat_in">Incomings</string>
+    <string name="myStat_out">Outgoings</string>
+    <string name="months">Months</string>
+    <string name="weeks">Weeks</string>
+    <!--Request Money-->
+    <string name="requestMoney_requestingAmount">Requesting amount</string>
+    <string name="requestMoney_generate">Generate</string>
+    <string name="requestMoney_stored">Stored at: %1$s</string>
+    <!--Transfer Money-->
+    <string name="transferMoney_SendingTo">Transfer details</string>
+    <string name="transferMoney_IBANAddress">IBAN Address</string>
+    <string name="transfer_invalidIBAN">Invalid IBAN</string>
+    <string name="transfer_invalidAmount">Invalid Amount</string>
+    <string name="transfer_minAmount">Amount needs to be more than $0.01</string>
+    <string name="transfer_insFunds">Insufficient funds</string>
+    <string name="transferConfirmation_title">Transfer Confirmation</string>
+    <string name="transferConfirmation_msg">Do you really want to send %1$s To IBAN: %2$s</string>
+    <string name="transfer_scanqr">Scan a QR Code</string>
+    <string name="transfer_scanqrcancel">Cancelled</string>
+    <!-- Account info Strings -->
+    <string name="account_holder">Holder</string>
+    <string name="account_number">Number</string>
+    <string name="account_type">Type</string>
+    <string name="account_balance">Balance</string>
+    <string name="account_banker">Banker</string>
+    <string name="Account">Account</string>
+    <string name="buttonCard">Show</string>
+    <string name="drawer_item_account_info">Account information</string>
+    <string name="drawer_item_section_money">Move money</string>
+    <string name="drawer_item_transfer_money">Transfer money</string>
+    <string name="drawer_item_pay_bills">Pay bills</string>
+    <string name="drawer_item_see_transaction">See transactions</string>
+    <string name="drawer_item_statsGraphic">My stats</string>
+    <string name="drawer_item_connect">Connect with us</string>
+    <string name="drawer_item_find_atm">Find ATM/Agency</string>
+    <string name="drawer_item_contact_us">Contact us</string>
+    <string name="drawer_item_disconnect">Disconnect</string>
+    <string name="drawer_item_send_request">Request</string>
+    <string name="request_debitCard">Debit Card Request</string>
+    <string name="hello_blank_fragment">blank</string>
+    <!-- Exchange -->
+    <string name="spinner_prompt">Choose a currency</string>
+    <string name="drawer_item_exchange">Exchange rates</string>
+    <string name="dialog_title">Base currency</string>
+    <string name="eu">EUR = Euro</string>
+    <string name="gb">GBP = United Kingdom Pounds</string>
+    <string name="ca">CAD = Canadian Dollars</string>
+    <string name="tn">TND = Tunisian Dinar</string>
+    <string name="jp">JPY = Japanese Yen</string>
+    <string name="us">USD = United States dollars</string>
+    <string name="ae">United Arab Emirates Dirham</string>
+    <string name="af">Afghan Afghani</string>
+    <string name="al">Albanian Lek</string>
+    <string name="am">Armenian Dram</string>
+    <string name="an">Netherlands Antillean Guilder</string>
+    <string name="ao">Angolan Kwanza</string>
+    <string name="ar">Argentine Peso</string>
+    <string name="au">Australian Dollar</string>
+    <string name="aw">Aruban Florin</string>
+    <string name="az">Azerbaijani Manat</string>
+    <string name="ba">Bosnia-Herzegovina Convertible Mark</string>
+    <string name="bb">Barbadian Dollar</string>
+    <string name="bd">Bangladeshi Taka</string>
+    <string name="bg">Bulgarian Lev</string>
+    <string name="bh">Bahraini Dinar</string>
+    <string name="bi">Burundian Franc</string>
+    <string name="bm">Bermudan Dollar</string>
+    <string name="bn">Brunei Dollar</string>
+    <string name="bo">Bolivian Boliviano</string>
+    <string name="br">Brazilian Real</string>
+    <string name="bs">Bahamian Dollar</string>
+    <string name="btc">Bitcoin</string>
+    <string name="bt">Bhutanese Ngultrum</string>
+    <string name="bw">Botswanan Pula</string>
+    <string name="byn">Belarusian Ruble</string>
+    <string name="byr">Belarusian Ruble (pre-2016)</string>
+    <string name="bz">Belize Dollar</string>
+    <string name="cd">Congolese Franc</string>
+    <string name="ch">Swiss Franc</string>
+    <string name="clf">Chilean Unit of Account (UF)</string>
+    <string name="clp">Chilean Peso</string>
+    <string name="cn">Chinese Yuan</string>
+    <string name="co">Colombian Peso</string>
+    <string name="cr">Costa Rican Colón</string>
+    <string name="cuc">Cuban Convertible Peso</string>
+    <string name="cup">Cuban Peso</string>
+    <string name="cv">Cape Verdean Escudo</string>
+    <string name="cz">Czech Republic Koruna</string>
+    <string name="dj">Djiboutian Franc</string>
+    <string name="dk">Danish Krone</string>
+    <string name="dop">Dominican Peso</string>
+    <string name="dz">Algerian Dinar</string>
+    <string name="ee">Estonian Kroon</string>
+    <string name="eg">Egyptian Pound</string>
+    <string name="er">Eritrean Nakfa</string>
+    <string name="et">Ethiopian Birr</string>
+    <string name="fj">Fijian Dollar</string>
+    <string name="fk">Falkland Islands Pound</string>
+    <string name="ge">Georgian Lari</string>
+    <string name="gg">Guernsey Pound</string>
+    <string name="gh">Ghanaian Cedi</string>
+    <string name="gi">Gibraltar Pound</string>
+    <string name="gm">Gambian Dalasi</string>
+    <string name="gn">Guinean Franc</string>
+    <string name="gt">Guatemalan Quetzal</string>
+    <string name="gy">Guyanaese Dollar</string>
+    <string name="hk">Hong Kong Dollar</string>
+    <string name="hn">Honduran Lempira</string>
+    <string name="hr">Croatian Kuna</string>
+    <string name="ht">Haitian Gourde</string>
+    <string name="hu">Hungarian Forint</string>
+    <string name="id">Indonesian Rupiah</string>
+    <string name="il">Israeli New Sheqel</string>
+    <string name="im">Manx pound</string>
+    <string name="in">Indian Rupee</string>
+    <string name="iq">Iraqi Dinar</string>
+    <string name="ir">Iranian Rial</string>
+    <string name="is">Icelandic Króna</string>
+    <string name="je">Jersey Pound</string>
+    <string name="jm">Jamaican Dollar</string>
+    <string name="jo">Jordanian Dinar</string>
+    <string name="ke">Kenyan Shilling</string>
+    <string name="kg">Kyrgystani Som</string>
+    <string name="kh">Cambodian Riel</string>
+    <string name="km">Comorian Franc</string>
+    <string name="kp">North Korean Won</string>
+    <string name="kr">South Korean Won</string>
+    <string name="kw">Kuwaiti Dinar</string>
+    <string name="ky">Cayman Islands Dollar</string>
+    <string name="kz">Kazakhstani Tenge</string>
+    <string name="la">Laotian Kip</string>
+    <string name="lb">Lebanese Pound</string>
+    <string name="lk">Sri Lankan Rupee</string>
+    <string name="lr">Liberian Dollar</string>
+    <string name="ls">Lesotho Loti</string>
+    <string name="lt">Lithuanian Litas</string>
+    <string name="lv">Latvian Lats</string>
+    <string name="ly">Libyan Dinar</string>
+    <string name="ma">Moroccan Dirham</string>
+    <string name="md">Moldovan Leu</string>
+    <string name="mg">Malagasy Ariary</string>
+    <string name="mk">Macedonian Denar</string>
+    <string name="mm">Myanma Kyat</string>
+    <string name="mn">Mongolian Tugrik</string>
+    <string name="mo">Macanese Pataca</string>
+    <string name="mr">Mauritanian Ouguiya</string>
+    <string name="mt">Maltese Lira</string>
+    <string name="mu">Mauritian Rupee</string>
+    <string name="mv">Maldivian Rufiyaa</string>
+    <string name="mw">Malawian Kwacha</string>
+    <string name="mx">Mexican Peso</string>
+    <string name="my">Malaysian Ringgit</string>
+    <string name="mz">Mozambican Metical</string>
+    <string name="na">Namibian Dollar</string>
+    <string name="ng">Nigerian Naira</string>
+    <string name="ni">Nicaraguan Córdoba</string>
+    <string name="no">Norwegian Krone</string>
+    <string name="np">Nepalese Rupee</string>
+    <string name="nz">New Zealand Dollar</string>
+    <string name="om">Omani Rial</string>
+    <string name="pa">Panamanian Balboa</string>
+    <string name="pe">Peruvian Nuevo Sol</string>
+    <string name="pg">Papua New Guinean Kina</string>
+    <string name="ph">Philippine Peso</string>
+    <string name="pk">Pakistani Rupee</string>
+    <string name="pl">Polish Zloty</string>
+    <string name="py">Paraguayan Guarani</string>
+    <string name="qa">Qatari Rial</string>
+    <string name="ro">Romanian Leu</string>
+    <string name="rs">Serbian Dinar</string>
+    <string name="ru">Russian Ruble</string>
+    <string name="rw">Rwandan Franc</string>
+    <string name="sa">Saudi Riyal</string>
+    <string name="sb">Solomon Islands Dollar</string>
+    <string name="sc">Seychellois Rupee</string>
+    <string name="sd">Sudanese Pound</string>
+    <string name="se">Swedish Krona</string>
+    <string name="sg">Singapore Dollar</string>
+    <string name="sh">Saint Helena Pound</string>
+    <string name="sl">Sierra Leonean Leone</string>
+    <string name="so">Somali Shilling</string>
+    <string name="sr">Surinamese Dollar</string>
+    <string name="st">São Tomé and Príncipe Dobra</string>
+    <string name="sv">Salvadoran Colón</string>
+    <string name="sy">Syrian Pound</string>
+    <string name="sz">Swazi Lilangeni</string>
+    <string name="th">Thai Baht</string>
+    <string name="tj">Tajikistani Somoni</string>
+    <string name="tm">Turkmenistani Manat</string>
+    <string name="to">Tongan Paʻanga</string>
+    <string name="tr">Turkish Lira</string>
+    <string name="tt">Trinidad and Tobago Dollar</string>
+    <string name="tw">New Taiwan Dollar</string>
+    <string name="tz">Tanzanian Shilling</string>
+    <string name="ua">Ukrainian Hryvnia</string>
+    <string name="ug">Ugandan Shilling</string>
+    <string name="uy">Uruguayan Peso</string>
+    <string name="uz">Uzbekistan Som</string>
+    <string name="ve">Venezuelan Bolívar Fuerte</string>
+    <string name="vn">Vietnamese Dong</string>
+    <string name="vu">Vanuatu Vatu</string>
+    <string name="ws">Samoan Tala</string>
+    <string name="xaf">CFA Franc BEAC</string>
+    <string name="xag">Silver (troy ounce)</string>
+    <string name="xau">Gold (troy ounce)</string>
+    <string name="xcd">East Caribbean Dollar</string>
+    <string name="xdr">Special Drawing Rights</string>
+    <string name="xof">CFA Franc BCEAO</string>
+    <string name="xpd">Palladium Ounce</string>
+    <string name="xpf">CFP Franc</string>
+    <string name="xpt">Platinum Ounce</string>
+    <string name="ye">Yemeni Rial</string>
+    <string name="za">South African Rand</string>
+    <string name="zmk">Zambian Kwacha (pre-2013)</string>
+    <string name="zm">Zambian Kwacha</string>
+    <string name="contact_Title">Have a question ?</string>
+    <string name="contact_first_name_hint">FIRST NAME</string>
+    <string name="contact_last_name_hint">LAST NAME</string>
+    <string name="contact_email_hint">EMAIL</string>
+    <string name="contact_country_hint">COUNTRY</string>
+    <string name="contact_message_hint">MESSAGE</string>
+    <string name="contact_button">SEND MESSAGE</string>
+    <string name="contact_siege_general">Siège et Direction Générale Tunisie</string>
+    <string name="contact_address">Rue du Lac Ghar El Mellh Imm Ezzeddine Ben Ayed 1053 Les Berges du Lac- Tunis-Tunisie</string>
+    <string name="contact_tel">Tél : +216 71 962 030</string>
+    <string name="contact_fax">Fax : +216 71 961 299</string>
+    <string name="contact_email">sbenhariz@bfigroupe.com</string>
+    <string name="contact_siege_algerie">Bureau Algérie</string>
+    <string name="contact_address_algerie">8 Rue des Freres KADRI (ex Savoie) HYDRA Alger</string>
+    <string name="contact_tel_algerie">Tél : +213 21 48 18 71</string>
+    <string name="contact_fax_algerie">Fax : +213 21 60 61 52</string>
+    <string name="contact_email1_algerie">ksaffar@bfigroupe.com</string>
+    <string name="contact_email2_algerie">sbenhariz@bfigroupe.com</string>
+    <string name="contact_siege_maroc">Bureau Maroc</string>
+    <string name="contact_address_maroc">Rue 4 Août Résidence Belvue Quartier Racine Casablanca El Maarif - Maroc</string>
+    <string name="contact_tel_maroc">Tél. : +212 522 39 44 59</string>
+    <string name="contact_fax_maroc">Fax : +212 522 39 50 13</string>
+    <string name="contact_email_maroc">ksaffar@bfigroupe.com</string>
+    <string name="money">Money</string>
+    <string name="request_date_birth">Birth date</string>
+    <string name="request_button">Request</string>
+    <string name="carte_gold_title">Les cartes GOLD Nationale et Internationale</string>
+    <string name="carte_gold_desc">Vous êtes client privilégié, haut cadre, diplomate, dirigeant ou chef d\'entreprise, commerçant ou professionnel libéral; nous vous proposons la carte GOLD dans sa version nationale. \n\n\nSi en plus étant résident, titulaire d\'un compte en dinars convertibles ou en devises et / ou d\'une allocation pour voyages d\'affaires,vous vous déplacez fréquement à l\'étranger, nous vous proposons la carte GOLD dans sa version internationale.</string>
+    <string name="carte_gold_subTitle">La carte Gold vous permet</string>
+    <string name="carte_gold_list">* Des plafonds de retrait et de paiement confortables.\n* Des retraits auprès des GABs nationaux et internationaux .\n* Des paiements auprès des commerçants affiliés Mastercard et Visa.\n* Un service cash advance rapide auprès des banques nationales et internationales .\n* Des paiements sur internet auprès des sites affiliés à: www.clicktopay.com.tn \n* Des privilèges auprès de différentes enseignes (hôtels, agences de voyages, compagnies de location de voitures, restaurants etc.). \n* La recharge des cartes prépayées Attijari bank par SMS ou via GAB/DAB.</string>
+    <string name="carte_visa_title">Les cartes VISA Nationale et Internationale</string>
+    <string name="carte_visa_desc">Vous êtes titulaire d\'un compte ouvert à Attijari bank, vous faites des dépenses à titre personnel ou professionnel, vous avez besoin de retirer de l\'argent liquide à tout moment. Nous vous proposons la carte VISA dans sa version Nationale.\n\n\nSi en plus, vous bénéficiez du droit de transfert et vous faites des déplacements à l\'étranger, nous vous proposons la carte VISA dans sa version Internationale.</string>
+    <string name="carte_visa_subTitle">La carte Visa vous permet</string>
+    <string name="carte_visa_list">De retirer de l\'argent liquide auprès de toutes les banques affiliées au réseau de votre carte (DAB/GAB et guichets).\n\nDe payer vos achats de biens et services auprès d\'un très grand nombre de commerçants affiliés.\n\nDe recharger les cartes prépayées Attijari bank par SMS ou via GAB/DAB.</string>
+    <string name="carte_salaire_title">La carte Salaire +</string>
+    <string name="carte_salaire_desc">Avec la carte SALAIRE PLUS, Attijari bank vous met à l\'abri des dépenses imprévues et vous autorise un découvert à hauteur de votre salaire mensuel.</string>
+    <string name="carte_salaire_subTitle">Avec la carte SALAIRE PLUS, vous pouvez</string>
+    <string name="carte_salaire_list">Faire face à des dépenses imprévues grâce au découvert accordé.\n\nRégler vos achats auprès des grandes surfaces, hôtels, restaurants ainsi qu\'un nombre important de commerçants.\n\nPayer vos factures (STEG, SONEDE, TELEPHONE,...) via internet, plus besoin de vous déplacer.\n\nRetirer de l\'espèce 24h/24 et 7j/7 auprès des GABs Attijari bank et ceux des autres banques.\n\nRecharger les cartes prépayées Attijari bank par SMS ou via GAB/DAB.</string>
+    <string name="carte_CIB_title">La carte CIB</string>
+    <string name="carte_CIB_desc">Une carte sur mesure pour paiements et retraits plus efficaces.</string>
+    <string name="carte_CIB_subTitle">La carte CIB vous permet de</string>
+    <string name="carte_CIB_list">Régler des achats et services sur les Terminaux de Paiement Electroniques installès chez des commerçants affiliés.\n\nRetirer de l\'espèce auprès des Guichets Automatiques de billets (GAB/DAB).\n\nPayer vos factures (STEG, SONEDE, TELEPHONE,...) via internet, plus besoin de vous déplacer..\n\nRecharger les cartes prépayées Attijari bank par SMS ou via GAB/DAB.</string>
+    <string name="carte_Iddikhar_title">La carte Iddikhar</string>
+    <string name="carte_Iddikhar_desc" />
+    <string name="carte_Iddikhar_subTitle">Votre épargne à portée de main</string>
+    <string name="carte_Iddikhar_list">Carte de retrait sur le compte carte Iddikhar qui fonctionne uniquement sur les GABs/DABs Attijari bank et ce, 24h/24 et 7j/7;\n\nElle se substitue au livret d\'épargne classique;\n\nElle permet le cash advance auprès des agences Attijari bank;\n\nPossibilité de consulter votre solde à l\'aide d\'un mini extrait de compte sur les GABs Attijari bank.</string>
+    <string name="carte_Voyage_title">La carte Voyage (Allocation touristique)</string>
+    <string name="carte_Voyage_desc">La carte Allocation touristique « Voyage » est une carte internationale de paiement et de retrait de fonds en devises utilisable exclusivement à l’étranger .  Toute personne physique résidente en Tunisie, éligible à une allocation touristique peut bénéficier de la carte</string>
+    <string name="carte_Voyage_subTitle">Avec la carte voyage, vous pouvez</string>
+    <string name="carte_Voyage_list">Régler vos dépenses à l\'étranger auprès des commerçants, grandes surfaces, hôtels, restaurants, affiliés au réseau VISA International\n\nRetirer de l\'argent auprès des DAB / GAB à l\'étranger affichant le logo VISA\n\nRetirer de l’espèce auprès des agences bancaires étrangères Réserver un hôtel à l’étranger sur Internet à partir de la Tunisie\n\nPercevoir le montant de la détaxe directement sur la carte</string>
+    <string name="carte_Mobicash_title">La carte prépayée Mobicash</string>
+    <string name="carte_Mobicash_desc">Vous souhaitez disposer d’un moyen de paiement sans avoir un compte en banque ? Attijari bank vous offre la carte prépayée « Mobicash ».  « Mobicash » est une carte bancaire locale qui peut être utilisée, à hauteur du montant pré-chargé et disponible sur la carte.</string>
+    <string name="carte_Mobicash_subTitle">la carte prépayée \"Mobicash\" vous permet de</string>
+    <string name="carte_Mobicash_list">effectuer des retraits d’argent à partir des GABs Attijari bank ou autres banques,\n\nrégler les divers achats chez les commerçants équipés de TPE et acceptant le paiement par carte bancaire (Commerces, Restaurants, Grandes Surfaces,….),\n\neffectuer diverses opérations en ligne : paiement de factures, achats, etc.\n\nElle peut être rechargée:\n\npar virement en agence à partir d’un compte Attijari bank,\n\nà partir des GABs Attijari bank,\n\nau moyen d’une carte de paiement Attijari bank ou autre banque,\n\net en accédant à la rubrique « Autres services » puis « Recharge carte prépayée ».</string>
+    <string name="carte_Jeunes_title">La carte prépayée Jeunes</string>
+    <string name="carte_Jeunes_desc">Avec ta carte \"Jeunes\", ton argent de poche prend une autre dimension. La carte « Jeunes » te donne l\'occasion d\'avoir une autonomie financière et de gérer toi-même tes dépenses</string>
+    <string name="carte_Jeunes_subTitle">La carte \"Jeunes\", Une liberté maitrisée</string>
+    <string name="carte_Jeunes_list">Ta carte te permet d\'effectuer des retraits d\'argent et des achats sans toutefois dépasser le montant de la recharge</string>
+    <string name="carte_Tawa_title">La carte prépayée Tawa Tawa</string>
+    <string name="carte_Tawa_desc">Pas besoin d\'être titulaire d\'un compte bancaire, la carte Tawa Tawa est une carte prépayée, disponible immédiatement et rechargeable à n\'importe quelle agence Attijari bank.  Valable 3 ans, elle vous permet d\'effectuer toutes vos opérations de retrait et de paiement en Tunisie. Pensez à l\'offrir à vos proches</string>
+    <string name="carte_Tawa_subTitle" />
+    <string name="carte_Tawa_list" />
+    <string name="debit_card_request_button">Request</string>
+    <string name="drawer_item_more">More services</string>
+    <string name="drawer_item_credit">Credit Simulator</string>
+    <string name="sim_request_ammount">Requested amount in DT</string>
+    <string name="sim_request_month">Number of months</string>
+    <string name="sim_btn">Simulate</string>
+    <string name="sim_text_request">You have requested :</string>
+    <string name="sim_text_month">To pay back in</string>
+    <string name="sim_result_text">You have to pay each month :</string>
+    <string name="Home">Home</string>
+    <string name="client_card_email">E-mail</string>
+    <string name="client_card_address">Address</string>
+    <string name="client_card_tel">Telephone</string>
+    <string name="creation_date">Creation date</string>
+    <string name="client_card_banker">Banker</string>
+    <string-array name="debit_card_type">
+        <item>Carte Gold National et International</item>
+        <item>Carte Visa National et International</item>
+        <item>Carte Salaire+</item>
+        <item>Carte CIB</item>
+        <item>Carte Iddikhar</item>
+        <item>Carte Voyage</item>
+        <item>Carte prépayée Mobicash</item>
+        <item>Carte prépayée Jeunes</item>
+        <item>Carte prépayée "Tawa Tawa"</item>
+    </string-array>
+    <string-array name="countries_array">
+        <item>Afghanistan</item>
+        <item>Albania</item>
+        <item>Algeria</item>
+        <item>American Samoa</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Anguilla</item>
+        <item>Antarctica</item>
+        <item>Antigua and Barbuda</item>
+        <item>Argentina</item>
+        <item>Armenia</item>
+        <item>Aruba</item>
+        <item>Australia</item>
+        <item>Austria</item>
+        <item>Azerbaijan</item>
+        <item>Bahrain</item>
+        <item>Bangladesh</item>
+        <item>Barbados</item>
+        <item>Belarus</item>
+        <item>Belgium</item>
+        <item>Belize</item>
+        <item>Benin</item>
+        <item>Bermuda</item>
+        <item>Bhutan</item>
+        <item>Bolivia</item>
+        <item>Bosnia and Herzegovina</item>
+        <item>Botswana</item>
+        <item>Bouvet Island</item>
+        <item>Brazil</item>
+        <item>British Indian Ocean Territory</item>
+        <item>British Virgin Islands</item>
+        <item>Brunei</item>
+        <item>Bulgaria</item>
+        <item>Burkina Faso</item>
+        <item>Burundi</item>
+        <item>Cambodia</item>
+        <item>Cameroon</item>
+        <item>Canada</item>
+        <item>Cape Verde</item>
+        <item>Cayman Islands</item>
+        <item>Central African Republic</item>
+        <item>Chad</item>
+        <item>Chile</item>
+        <item>China</item>
+        <item>Christmas Island</item>
+        <item>Cocos (Keeling) Islands</item>
+        <item>Colombia</item>
+        <item>Comoros</item>
+        <item>Congo</item>
+        <item>Cook Islands</item>
+        <item>Costa Rica</item>
+        <item>Cote d\'Ivoire</item>
+        <item>Croatia</item>
+        <item>Cuba</item>
+        <item>Cyprus</item>
+        <item>Czech Republic</item>
+        <item>Democratic Republic of the Congo</item>
+        <item>Denmark</item>
+        <item>Djibouti</item>
+        <item>Dominica</item>
+        <item>Dominican Republic</item>
+        <item>East Timor</item>
+        <item>Ecuador</item>
+        <item>Egypt</item>
+        <item>El Salvador</item>
+        <item>Equatorial Guinea</item>
+        <item>Eritrea</item>
+        <item>Estonia</item>
+        <item>Ethiopia</item>
+        <item>Faeroe Islands</item>
+        <item>Falkland Islands</item>
+        <item>Fiji</item>
+        <item>Finland</item>
+        <item>Former Yugoslav Republic of Macedonia</item>
+        <item>France</item>
+        <item>French Guiana</item>
+        <item>French Polynesia</item>
+        <item>French Southern Territories</item>
+        <item>Gabon</item>
+        <item>Georgia</item>
+        <item>Germany</item>
+        <item>Ghana</item>
+        <item>Gibraltar</item>
+        <item>Greece</item>
+        <item>Greenland</item>
+        <item>Grenada</item>
+        <item>Guadeloupe</item>
+        <item>Guam</item>
+        <item>Guatemala</item>
+        <item>Guinea</item>
+        <item>Guinea-Bissau</item>
+        <item>Guyana</item>
+        <item>Haiti</item>
+        <item>Heard Island and McDonald Islands</item>
+        <item>Honduras</item>
+        <item>Hong Kong</item>
+        <item>Hungary</item>
+        <item>Iceland</item>
+        <item>India</item>
+        <item>Indonesia</item>
+        <item>Iran</item>
+        <item>Iraq</item>
+        <item>Ireland</item>
+        <item>Israel</item>
+        <item>Italy</item>
+        <item>Jamaica</item>
+        <item>Japan</item>
+        <item>Jordan</item>
+        <item>Kazakhstan</item>
+        <item>Kenya</item>
+        <item>Kiribati</item>
+        <item>Kuwait</item>
+        <item>Kyrgyzstan</item>
+        <item>Laos</item>
+        <item>Latvia</item>
+        <item>Lebanon</item>
+        <item>Lesotho</item>
+        <item>Liberia</item>
+        <item>Libya</item>
+        <item>Liechtenstein</item>
+        <item>Lithuania</item>
+        <item>Luxembourg</item>
+        <item>Macau</item>
+        <item>Madagascar</item>
+        <item>Malawi</item>
+        <item>Malaysia</item>
+        <item>Maldives</item>
+        <item>Mali</item>
+        <item>Malta</item>
+        <item>Marshall Islands</item>
+        <item>Martinique</item>
+        <item>Mauritania</item>
+        <item>Mauritius</item>
+        <item>Mayotte</item>
+        <item>Mexico</item>
+        <item>Micronesia</item>
+        <item>Moldova</item>
+        <item>Monaco</item>
+        <item>Mongolia</item>
+        <item>Montenegro</item>
+        <item>Montserrat</item>
+        <item>Morocco</item>
+        <item>Mozambique</item>
+        <item>Myanmar</item>
+        <item>Namibia</item>
+        <item>Nauru</item>
+        <item>Nepal</item>
+        <item>Netherlands</item>
+        <item>Netherlands Antilles</item>
+        <item>New Caledonia</item>
+        <item>New Zealand</item>
+        <item>Nicaragua</item>
+        <item>Niger</item>
+        <item>Nigeria</item>
+        <item>Niue</item>
+        <item>Norfolk Island</item>
+        <item>North Korea</item>
+        <item>Northern Marianas</item>
+        <item>Norway</item>
+        <item>Oman</item>
+        <item>Pakistan</item>
+        <item>Palau</item>
+        <item>Panama</item>
+        <item>Papua New Guinea</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Philippines</item>
+        <item>Pitcairn Islands</item>
+        <item>Poland</item>
+        <item>Portugal</item>
+        <item>Puerto Rico</item>
+        <item>Qatar</item>
+        <item>Reunion</item>
+        <item>Romania</item>
+        <item>Russia</item>
+        <item>Rwanda</item>
+        <item>Sqo Tome and Principe</item>
+        <item>Saint Helena</item>
+        <item>Saint Kitts and Nevis</item>
+        <item>Saint Lucia</item>
+        <item>Saint Pierre and Miquelon</item>
+        <item>Saint Vincent and the Grenadines</item>
+        <item>Samoa</item>
+        <item>San Marino</item>
+        <item>Saudi Arabia</item>
+        <item>Senegal</item>
+        <item>Serbia</item>
+        <item>Seychelles</item>
+        <item>Sierra Leone</item>
+        <item>Singapore</item>
+        <item>Slovakia</item>
+        <item>Slovenia</item>
+        <item>Solomon Islands</item>
+        <item>Somalia</item>
+        <item>South Africa</item>
+        <item>South Georgia and the South Sandwich Islands</item>
+        <item>South Korea</item>
+        <item>South Sudan</item>
+        <item>Spain</item>
+        <item>Sri Lanka</item>
+        <item>Sudan</item>
+        <item>Suriname</item>
+        <item>Svalbard and Jan Mayen</item>
+        <item>Swaziland</item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+        <item>Syria</item>
+        <item>Taiwan</item>
+        <item>Tajikistan</item>
+        <item>Tanzania</item>
+        <item>Thailand</item>
+        <item>The Bahamas</item>
+        <item>The Gambia</item>
+        <item>Togo</item>
+        <item>Tokelau</item>
+        <item>Tonga</item>
+        <item>Trinidad and Tobago</item>
+        <item>Tunisia</item>
+        <item>Turkey</item>
+        <item>Turkmenistan</item>
+        <item>Turks and Caicos Islands</item>
+        <item>Tuvalu</item>
+        <item>Virgin Islands</item>
+        <item>Uganda</item>
+        <item>Ukraine</item>
+        <item>United Arab Emirates</item>
+        <item>United Kingdom</item>
+        <item>United States</item>
+        <item>United States Minor Outlying Islands</item>
+        <item>Uruguay</item>
+        <item>Uzbekistan</item>
+        <item>Vanuatu</item>
+        <item>Vatican City</item>
+        <item>Venezuela</item>
+        <item>Vietnam</item>
+        <item>Wallis and Futuna</item>
+        <item>Western Sahara</item>
+        <item>Yemen</item>
+        <item>Yugoslavia</item>
+        <item>Zambia</item>
+        <item>Zimbabwe</item>
+    </string-array>
+    <string-array name="weekArray">
+        <item>Week 1</item>
+        <item>Week 2</item>
+        <item>Week 3</item>
+        <item>Week 4</item>
+    </string-array>
+    <string-array name="months_to_show">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+
 </resources>

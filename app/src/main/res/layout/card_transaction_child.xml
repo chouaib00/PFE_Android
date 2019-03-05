@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/material_amber_50"
+    android:paddingTop="10dp"
+    android:paddingLeft="5dp"
+    android:paddingStart="5dp"
+    android:paddingRight="3dp"
+    android:paddingEnd="3dp"
+    android:paddingBottom="10dp">
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:met_floatingLabel="normal"
+        app:met_iconLeft="@drawable/ic_credit_card"
+        app:met_iconPadding="0dp"
+        app:met_baseColor="@color/material_amber_800"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:editable="false"
+        android:id="@+id/transactionCardChild_accountNumber"
+        android:layout_marginLeft="12dp"/>
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:layout_below="@id/transactionCardChild_accountNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="25dp"
+        app:met_floatingLabel="normal"
+        app:met_iconLeft="@drawable/dollarsymbol"
+        app:met_iconPadding="0dp"
+        app:met_baseColor="@color/material_amber_800"
+        android:textColor="@color/fbutton_color_concrete"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:editable="false"
+        android:text="@string/transactionCard_old_balance"
+        android:id="@+id/transactionCardChild_OldBalance"
+        android:layout_marginLeft="12dp"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:layout_below="@id/transactionCardChild_accountNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="25dp"
+        app:met_floatingLabel="normal"
+        app:met_iconLeft="@drawable/dollarsymbol"
+        app:met_iconPadding="0dp"
+        app:met_baseColor="@color/material_amber_800"
+        android:textColor="@color/fbutton_color_concrete"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:editable="false"
+        android:text="@string/transactionCard_new_balance"
+        android:id="@+id/transactionCardChild_NewBalance"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        app:srcCompat="@drawable/right_arrow"
+        android:layout_below="@+id/transactionCardChild_accountNumber"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView2" />
+
+
+</RelativeLayout>

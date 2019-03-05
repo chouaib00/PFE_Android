@@ -1,0 +1,21 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.isi.pfe.bank_app.Fragments.Pay_Bills">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarbills"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        style="@style/MyToolbar"
+        app:titleTextAppearance="@style/ToolbarTextAppearance.Title"
+        >
+    </android.support.v7.widget.Toolbar>    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
+
+</FrameLayout>

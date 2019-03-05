@@ -1,45 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Manage Accounts">
-        <menu>
-            <item
-                android:id="@+id/my_acc"
-                android:icon="@drawable/ic_menu_share"
-                android:title="My Accounts" />
-            <item
-                android:id="@+id/add_acc"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Add Account" />
-        </menu>
-    </item>
-    <group android:id="@+id/gr">
         <item android:title="Account Overview">
             <menu>
                 <item
-                    android:id="@+id/acc_info"
+                    android:id="@+id/account_information"
                     android:icon="@drawable/ic_menu_share"
                     android:title="Account information" />
                 <item
-                    android:id="@+id/recent_act"
+                    android:id="@+id/profile_settings"
                     android:icon="@drawable/ic_menu_send"
-                    android:title="Recent Activity" />
-            </menu>
-        </item>
-
-        <item android:title="Transactions">
-            <menu>
+                    android:title="Profile Settings" />
                 <item
-                    android:id="@+id/trasfer_money"
+                    android:id="@+id/Account_test"
                     android:icon="@drawable/ic_menu_share"
-                    android:title="Trasnfer Money" />
-                <item
-                    android:id="@+id/deposit_money"
-                    android:icon="@drawable/ic_menu_send"
-                    android:title="Deposit Money" />
+                    android:title="AccountTest" />
             </menu>
         </item>
-    </group>
     <item android:title="Disconnect"
         android:id="@+id/disconnect"
         android:icon="@android:drawable/ic_menu_close_clear_cancel" />
