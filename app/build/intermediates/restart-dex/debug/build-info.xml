@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86,armeabi-v7a,armeabi"
+    api-level="21"
+    density="mdpi"
+    format="8"
+    plugin-version="2.2.3"
+    timestamp="5977004494814"
+    token="7450479816162403514"
+    verifier="COLD_SWAP_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="0" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="0" />
+    <task
+        name="verifier"
+        duration="0" />
+
+    <build
+        timestamp="5743504026842"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/home/wajdi/Téléchargements/Bank_app/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="5977004494814"
+        verifier="COLD_SWAP_REQUESTED" />
+    <build
+        timestamp="36885606813864"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
+    </build>
+
+</instant-run>

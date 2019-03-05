@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.1.1_3136d64d59b3e7c7bccb1545c6c37009cef65787.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.1.1_ffae92633b3d5afc0b1583eae68aa8cb36a3ead4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.1.1_51dc799c6345fbe30208e8d3e378e907fdd52704.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
+        <dex dex="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.1.1_e90e343ec4ca711c169958e1c6ee16f86734b15a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wajdi/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/6.1.0/63735f48b82bcd24cdd33821342428252eb1ca5a/butterknife-6.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="63735f48b82bcd24cdd33821342428252eb1ca5a">
+        <dex dex="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/pre-dexed/debug/butterknife-6.1.0_972ea13d1a26ca5c8daa3a6f0c92a4991bb4c8ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.1_f90cf7a1c0bfe7cf36e885a85f1513c75e81a681.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.1.1_08acd524414932012d76361eee9e2155639d908e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
+        <dex dex="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.1.1_926ca8bd6287648e4258b4cd354d52b173ae7cb9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wajdi/Téléchargements/Bank_app/app/libs/android-async-http-1.4.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3bae85a076241828810bf8fbcc12e5891d5fc34c">
+        <dex dex="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.4_d4dd129a0a5778407122e9eed706520b30a71ff1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
+        <dex dex="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.1.1_710285cea927671ba11a148fa3c5f85f0587b2fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wajdi/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.1_b68f5bace206da3c240e84524dae0ceead2fb64f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.1_d62d0f67ffcd9b99518c3df45554f3d3845da527.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.1.1_57bcddccd5d1acf871cf3e9289bbf96927e1bb71.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.1.1_e32de02a75ef96c74d375216085c753487c4615f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="/home/wajdi/Téléchargements/Bank_app/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.1.1_396c18741876ba29b2fb4420dbc7399b34729f0c.jar" />
+    </item>
+
+</items>
